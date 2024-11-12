@@ -25,10 +25,11 @@ body, html {
 .main {
   height: 100vh;
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Ensures .main is above the video */
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-bottom: 20px; /* Adds space at the bottom for visibility */
 }
 
 .hanger {
