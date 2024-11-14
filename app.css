@@ -23,14 +23,34 @@ body, html {
 }
 
 .main {
-  height: 100vh;
-  position: relative;
+  height: auto; /* Set height to auto so it doesn't take up full viewport height */
+  width: 100%; /* Ensure it spans the full width */
+  position: fixed;
+  bottom: 0;
   z-index: 1; /* Ensures .main is above the video */
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 20px; /* Adds space at the bottom for visibility */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7); /* Optional: add a semi-transparent background */
+  color: white; /* Optional: adjust text color for readability */
 }
+
+.about {
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 40px;
+  color: white; /* Ensures high contrast */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to improve visibility */
+}
+
+.about p {
+  font-size: 25px;
+  color: white; /* Ensures high contrast */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to improve visibility */
+}
+
 
 .hanger {
   height: 100px;
@@ -41,6 +61,8 @@ body, html {
   transform: translate(-50%, -50%); 
   z-index: 1;
   display: flex;
+  flex-direction: column;
+  gap: 30px;
   justify-content: center;
   align-items: center; 
 }
