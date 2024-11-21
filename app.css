@@ -1,38 +1,71 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and HTML */
 body, html {
   height: 100%;
   overflow: hidden;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    violet
+  );
+  background-size: 200% 100%; /* Smooth animation */
+  animation: rainbow-move 10s linear infinite; /* Continuous motion */
 }
 
-.background-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  object-fit: cover;
+/* Rainbow background animation */
+@keyframes rainbow-move {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
 }
 
+/* Splash effect */
+.splash {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+  transform: scale(0);
+  animation: splash-animation 1.5s ease-out forwards;
+}
+
+@keyframes splash-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+/* Main Section */
 .main {
-  height: auto; /* Set height to auto so it doesn't take up full viewport height */
-  width: 100%; /* Ensure it spans the full width */
+  height: auto;
+  width: 100%;
   position: fixed;
   bottom: 0;
-  z-index: 1; /* Ensures .main is above the video */
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7); /* Optional: add a semi-transparent background */
-  color: white; /* Optional: adjust text color for readability */
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .about {
@@ -40,25 +73,28 @@ body, html {
 }
 
 .about h1 {
-  font-size: 40px;
-  color: white; /* Ensures high contrast */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to improve visibility */
+  font-size: 50px;
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .about p {
   font-size: 25px;
-  color: white; /* Ensures high contrast */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to improve visibility */
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-
+/* Hanger Section */
 .hanger {
   height: 100px;
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -68,7 +104,7 @@ body, html {
 }
 
 .hanger div {
-  background-color: #003262;
+  background-color: #ffffff;
   padding: 10px;
   padding: 0px 30px;
   border-radius: 10% / 50%;
@@ -85,6 +121,7 @@ body, html {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -93,7 +130,7 @@ body, html {
 }
 
 .icon {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 2.2rem;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -117,11 +154,11 @@ body, html {
   justify-content: center;
 }
 
-
+/* Titles List */
 .titles-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 100px;
   list-style: none;
   padding: 0;
 }
