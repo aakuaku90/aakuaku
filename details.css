@@ -1,0 +1,148 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #003262;
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Project Details Section */
+.project-details {
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto; /* Center horizontally */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Ensure it shrinks on smaller screens */
+}
+
+.project-details h2 {
+  font-size: 1.8rem;
+  color: #003262;
+  margin-bottom: 15px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.project-links a {
+  color: #003262;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-links a:hover {
+  color: #FDB515;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #003262;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0055a4;
+}
+
+.project-video {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.project-video h3 {
+  font-size: 1.5rem;
+  color: #003262;
+  margin-bottom: 10px;
+}
+
+.project-video video {
+  max-width: 100%; /* Ensures the video never exceeds the container width */
+  max-height: 500px; /* Restricts the maximum height */
+  height: auto; /* Maintains the aspect ratio */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.project-gallery {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 15px; /* Space between images */
+  margin-top: 20px;
+  padding-bottom: 10px; /* Add padding for a smoother scroll experience */
+}
+
+.project-gallery img {
+  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 280px; /* Set a fixed width for images */
+  height: 350px; /* Set a fixed height for consistent cropping */
+  object-fit: cover; /* Crop the image to fit the dimensions */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+/* Hide horizontal scrollbar for modern browsers */
+.project-gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers */
+}
+.project-gallery {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer 10+ */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Media query for very small screens */
+@media (max-width: 817px) {
+  .project-details {
+    width: 98%; /* Shrinks further for small screens */
+    padding: 15px; /* Reduce padding to save space */
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  .project-gallery img {
+    width: 100%; /* Use full width for smaller screens */
+    height: 150px; /* Adjust height for smaller screens */
+    object-fit: cover; /* Maintain cropping */
+  }
+}

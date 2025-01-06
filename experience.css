@@ -73,6 +73,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Aligns content to the top */
+  gap: 10px; /* Add space between content and buttons */
   padding-right: 60px; /* Adds space for project-links */
 }
 
@@ -82,15 +83,21 @@ h1 {
 }
 
 .grid-item h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #003262; /* Matches header background color */
-  margin-bottom: 5px; /* Reduced spacing below title */
 }
 
 .grid-item p {
   font-size: 1rem;
   color: #666;
   margin: 0; /* Removed margin to position text immediately after title */
+}
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  gap: 10px; /* Space between Love and Details buttons */
+  margin-top: auto;
 }
 
 /* Love Button Styling */
@@ -100,9 +107,6 @@ h1 {
   color: #ccc; /* Default color for unliked state */
   font-size: 1.5rem;
   cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -123,10 +127,29 @@ h1 {
   color: inherit; /* Matches color of the heart icon */
 }
 
+/* Details Button Styling */
+.details-button {
+  background-color: #FDB515;
+  color: #003262;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #ffc84a;
+  color: #003262;
+}
+
 /* Project Links Styling */
 .project-links {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
   position: absolute;
   right: 0;
@@ -181,5 +204,10 @@ h1 {
     flex-direction: row;
     justify-content: center;
     border-radius: 0 0 8px 8px;
+  }
+
+  .buttons {
+    bottom: 10px; /* Adjusted for smaller screens */
+    left: 10px; /* Adjusted for smaller screens */
   }
 }

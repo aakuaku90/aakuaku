@@ -47,3 +47,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     setTimeout(() => splash.remove(), 1500); // Remove splash after animation
   });
+
+  function navigateToDetails(project) {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+    console.log('Scroll position saved:', window.scrollY);
+    location.href = `details.html?project=${project}`;
+}
+
+function restoreScrollPosition() {
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    console.log('Restoring scroll position:', scrollPosition);
+    if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
+}
+
+window.onload = restoreScrollPosition;
+window.addEventListener('popstate', restoreScrollPosition);
