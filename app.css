@@ -12,8 +12,6 @@ body, html {
   background: linear-gradient(
     to right,
     orange,
-    green,
-    violet
   );
   background-size: 200% 100%; /* Smooth animation */
   animation: rainbow-move 10s linear infinite; /* Continuous motion */
