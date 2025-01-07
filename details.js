@@ -25,14 +25,15 @@ const projectDetails = {
     images: ['media/ontology.png', 'media/food.png', 'media/recom.png'], // Image paths
     video: 'media/forage-video.mp4' // Add the video source for this project
   },
-  'students': {
-    title: 'Tangible User Interfaces',
-    description: 'Developed interactive TUIs for innovative student projects.',
+  'web-crawler': {
+    title: 'Web Crawler with Interactive Graph Visualization',
+    description: 'The application enables users to input a starting URL and specify a search term to filter results during the crawl. The web crawler respects ethical guidelines by adhering to robots.txt rules, ensuring that only permitted pages are processed. Search results are displayed dynamically, showing links that match the specified term in a clean, professional layout. Each result is styled with borders and padding, making them visually distinct and user-friendly. \n\nThe graph visualization is powered by D3.js and represents crawled pages as nodes, numbered sequentially for easy identification. Edges between nodes represent links, labeled with the last three segments of the target URL for clarity. This interactive graph updates in real-time as the crawler processes pages, providing users with a clear and engaging representation of the relationships between web pages. \n\nBuilt using Python and Flask, the backend of this project handles user inputs, performs the crawling, and processes data. Libraries like BeautifulSoup and urllib are used for parsing HTML content and managing URLs, while D3.js is leveraged to create dynamic and scalable visualizations. The frontend is crafted with HTML, CSS, and JavaScript, ensuring a responsive and visually appealing interface. \n\nThis Github page for this code is private',
     links: [
-      { url: 'https://github.com/example3', text: 'GitHub', icon: 'fab fa-github' },
-      { url: 'https://medium.com/example3', text: 'Blog', icon: 'fab fa-medium' },
+      { url: 'https://github.com/aakuaku90/My-Flask-App', text: 'GitHub', icon: 'fab fa-github' },
+      { url: 'https://github.com/aakuaku90/My-Flask-App', text: 'Blog', icon: 'fab fa-medium' },
     ],
-    video: 'data-analysis.mp4' // Add the video source for this project
+    images: ['media/crl2.png', 'media/crl1.png'], // Image paths
+    video: 'media/crawler.mp4' // Add the video source for this project
   }
 };
 
