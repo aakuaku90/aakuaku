@@ -370,7 +370,7 @@ body, html {
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-container {
-    width: 90%; /* Adjust container width for smaller screens */
+    width: 97%; /* Adjust container width for smaller screens */
   }
 
   .about-image {
@@ -378,7 +378,7 @@ body, html {
   }
 
   .about-bio {
-    width: 90%; /* Adjust bio width */
+    width: 97%; /* Adjust bio width */
   }
 }
 
