@@ -22,7 +22,7 @@ const projectDetails = {
       { url: 'https://github.com/aakuaku90/202', text: 'GitHub', icon: 'fab fa-github' },
       { url: 'https://aakuaku90.github.io/202/', text: 'Test site', icon: 'fab fa-globe' },
     ], 
-    images: ['media/ontology.png', 'media/food.png', 'media/recom.png'], // Image paths
+    images: ['media/ontology.png', 'media/Food.png', 'media/recom.png'], // Image paths
     video: 'media/forage-video.mp4' // Add the video source for this project
   },
   'web-crawler': {

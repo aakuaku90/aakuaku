@@ -35,8 +35,8 @@ const mediaData = {
     { src: 'media/tui2.jpg', type: 'image', place: 'South Hall' },
     { src: 'media/tui3.jpg', type: 'image', place: 'South Hall' },
     { src: 'media/finalproject.mp4', type: 'video', place: 'South Hall' },
-    { src: 'media/southhall1.jpg', type: 'image', place: 'South Hall' },
-    { src: 'media/southhall2.jpg', type: 'image', place: 'South Hall' },
+    { src: 'media/southhall1.JPG', type: 'image', place: 'South Hall' },
+    { src: 'media/southhall2.JPG', type: 'image', place: 'South Hall' },
   ],
 };
 
