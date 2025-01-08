@@ -387,10 +387,6 @@ body, html {
     width: 200px; /* Further reduce image size for small screens */
   }
 
-  .about-bio h1 {
-    font-size: 1.8rem; /* Slightly smaller heading */
-  }
-
   .about-bio p {
     font-size: 1.1rem; /* Adjust paragraph font size */
   }
