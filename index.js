@@ -168,7 +168,7 @@ document.getElementById('send-email').addEventListener('click', function () {
   const templateParams = {
     name: name.value,
     email: email.value,
-    message: message.valu,
+    message: message.value,
   };
 
   emailjs
