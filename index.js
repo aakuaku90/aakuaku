@@ -156,25 +156,29 @@ document.addEventListener('DOMContentLoaded', () => {
 emailjs.init('dKTzGGTarsTgSIOsQ'); // Replace with your EmailJS User ID
 
 document.getElementById('send-email').addEventListener('click', function () {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
 
-  if (!name || !email || !message) {
+  if (!name.value || !email.value || !message.value) {
     alert('All fields are required.');
     return;
   }
 
   const templateParams = {
-    name: name,
-    email: email,
-    message: message,
+    name: name.value,
+    email: email.value,
+    message: message.valu,
   };
 
   emailjs
     .send('service_enwer1c', 'template_ed9j9o8', templateParams)
     .then(function (response) {
       alert('Message sent successfully!');
+      // Clear the form fields
+      name.value = '';
+      email.value = '';
+      message.value = '';
     })
     .catch(function (error) {
       alert('Failed to send message. Please try again.');
