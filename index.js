@@ -160,9 +160,8 @@ document.getElementById('send-email').addEventListener('click', function () {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  // Check if all fields are filled and reCAPTCHA is solved
-  if (!name || !email || !message || !recaptchaResponse) {
-    alert('All fields and reCAPTCHA are required.');
+  if (!name || !email || !message) {
+    alert('All fields are required.');
     return;
   }
 
