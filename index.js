@@ -151,3 +151,34 @@ function scrollGallery(container, direction) {
 document.addEventListener('DOMContentLoaded', () => {
   generateGallery(mediaData);
 });
+
+// Emails 
+emailjs.init('dKTzGGTarsTgSIOsQ'); // Replace with your EmailJS User ID
+
+document.getElementById('send-email').addEventListener('click', function () {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Check if all fields are filled and reCAPTCHA is solved
+  if (!name || !email || !message || !recaptchaResponse) {
+    alert('All fields and reCAPTCHA are required.');
+    return;
+  }
+
+  const templateParams = {
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  emailjs
+    .send('service_enwer1c', 'template_ed9j9o8', templateParams)
+    .then(function (response) {
+      alert('Message sent successfully!');
+    })
+    .catch(function (error) {
+      alert('Failed to send message. Please try again.');
+    });
+});
+

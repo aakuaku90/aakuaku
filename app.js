@@ -64,3 +64,4 @@ function restoreScrollPosition() {
 
 window.onload = restoreScrollPosition;
 window.addEventListener('popstate', restoreScrollPosition);
+

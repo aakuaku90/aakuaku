@@ -323,7 +323,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 70px 10px;
 }
 
 /* General Styling for the Container */
@@ -389,6 +389,83 @@ body, html {
 
   .about-bio p {
     font-size: 1.1rem; /* Adjust paragraph font size */
+  }
+}
+
+
+/* Form Container */
+form {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9b8;
+  border-radius: 8px;
+}
+
+/* Form Labels */
+form label {
+  display: flex;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Form Inputs */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Input Focus State */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #003262;
+}
+
+/* Textarea */
+form textarea {
+  height: 150px;
+  resize: vertical; /* Allow resizing vertically */
+}
+
+/* Submit Button */
+form button {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #164b7c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Button */
+form button:hover {
+  background-color: #003262;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  form {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+  form button {
+    font-size: 16px;
   }
 }
 
