@@ -137,12 +137,3 @@ button:hover {
     padding: 15px; /* Reduce padding to save space */
   }
 }
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 600px) {
-  .project-gallery img {
-    width: 100%; /* Use full width for smaller screens */
-    height: 150px; /* Adjust height for smaller screens */
-    object-fit: cover; /* Maintain cropping */
-  }
-}
