@@ -185,3 +185,6 @@ document.getElementById('send-email').addEventListener('click', function () {
     });
 });
 
+// footer year
+document.getElementById("current-year").textContent = new Date().getFullYear();
+

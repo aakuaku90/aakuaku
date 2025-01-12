@@ -65,3 +65,5 @@ function restoreScrollPosition() {
 window.onload = restoreScrollPosition;
 window.addEventListener('popstate', restoreScrollPosition);
 
+// footer year
+document.getElementById("current-year").textContent = new Date().getFullYear();

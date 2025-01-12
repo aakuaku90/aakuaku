@@ -99,3 +99,6 @@ if (project && projectDetails[project]) {
   document.getElementById('project-gallery').style.display = 'none'; // Hide gallery
   document.querySelector('.project-video').style.display = 'none'; // Hide video section
 }
+
+// footer year
+document.getElementById("current-year").textContent = new Date().getFullYear();
